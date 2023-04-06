@@ -1,9 +1,4 @@
-$flex-property: (
-  start: flex-start,
-  center: center,
-  end: flex-end
-);
-
+// d-flex
 .d-flex {
   display: flex;
 }
@@ -20,5 +15,17 @@ $flex-property: (
   }
   .justify-content-#{$name} {
     justify-content: $value;
+  }
+}
+
+// d-none
+.d-none {
+  display: none;
+}
+@each $name, $media in $breakpoints {
+  @media (max-width: $media) {
+    .d-#{$name}-none {
+      display: none !important;
+    }
   }
 }

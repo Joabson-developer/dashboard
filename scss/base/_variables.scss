@@ -1,0 +1,22 @@
+$flex-property: (
+  start: flex-start,
+  center: center,
+  end: flex-end
+);
+
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+$breakpoints-max-widths: (
+  sm: 33.75rem,
+  md: 45rem,
+  lg: 60rem,
+  xl: 71.25rem,
+  xxl: 82.5rem,
+  fluid: 100%
+);

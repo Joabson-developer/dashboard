@@ -1,11 +1,22 @@
 <div class="l-member-list">
+  <h1>Lista de membros</h1>
+
+  <fieldset class="c-search">
+    <legend class="c-search__legend">Buscar...</legend>
+    <!-- <label class="c-search__label" for="search">Buscar...</label> -->
+    <input class="c-search__input" id="search" type="text">
+    <span class="material-icons-outlined c-search__icon-search">
+      search
+    </span>
+  </fieldset>
+
   <div class="box-table">
     <table class="c-table" aria-label="simple table">
       <thead>
         <tr>
           <th>Dessert (100g serving)</th>
-          <th>Calories</th>
-          <th>Fat&nbsp;(g)</th>
+          <th class="d-md-none">Calories</th>
+          <th class="d-md-none">Fat&nbsp;(g)</th>
           <th>Carbs&nbsp;(g)</th>
           <th>Protein&nbsp;(g)</th>
         </tr>
@@ -13,19 +24,46 @@
       <tbody>
         <tr>
           <th>Frozen yoghurt</th>
-          <td>159</td>
-          <td>6</td>
+          <td class="d-md-none">159</td>
+          <td class="d-md-none">6</td>
           <td>24</td>
           <td>4</td>
         </tr>
         <tr>
           <th>Ice cream sandwich</th>
-          <td>237</td>
-          <td>9</td>
+          <td class="d-md-none">237</td>
+          <td class="d-md-none">9</td>
           <td>37</td>
           <td>4.3</td>
         </tr>
       </tbody>
     </table>
+
+    <div class="c-pagination">
+      <div class="c-pagination__page-size">
+        <label for="rows-per-page">Linhas por página:</label>
+        <select id="rows-per-page">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+        </select>
+      </div>
+
+      <span class="c-pagination__info">1–5 de 13</span>
+
+      <div class="c-pagination__buttons">
+        <button>
+          <span class="material-icons-outlined">
+            navigate_before
+          </span>
+        </button>
+        <button>
+          <span class="material-icons-outlined">
+            navigate_next
+          </span>
+        </button>
+      </div>
+    </div>
   </div>
 </div>

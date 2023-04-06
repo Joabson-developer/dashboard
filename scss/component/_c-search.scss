@@ -1,0 +1,58 @@
+.c-search {
+  min-height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-inline: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  transition: border 250ms ease;
+  position: relative;
+
+  &:has(:focus) {
+    border-color: rgba(103, 58, 183, 0.4);
+
+    .c-search__legend,
+    .c-search__icon-search {
+      color: #673ab7;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    left: 24px;
+    top: 8px;
+    z-index: 1;
+    font-size: 14px;
+  }
+
+  &__legend {
+    padding-inline: 8px;
+    line-height: 26px;
+    font-size: 14px;
+  }
+
+  &__input {
+    min-height: inherit;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    translate: 0 -4px;
+    margin-left: 8px;
+    background-color: transparent;
+  }
+
+  &__icon-search {
+    color: #5d5d5d;
+    translate: 2px -4px;
+  }
+
+  @keyframes move-label {
+    from {
+    }
+    to {
+    }
+  }
+}

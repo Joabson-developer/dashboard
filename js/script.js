@@ -5,5 +5,6 @@ document.addEventListener("click", ({ target }) => {
 
   if (target.dataset.toggle === "aside") aside.classList.add("active")
 
-  if (target.classList.contains("l-dashboard")) aside.classList.remove("active")
+  if (target.classList.contains("l-aside__backdrop"))
+    aside.classList.remove("active")
 })

@@ -1,0 +1,38 @@
+.c-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+
+  &__page-size {
+    label {
+      font-size: 14px;
+    }
+    select {
+      min-width: 45px;
+      border: none;
+      font-size: 14px;
+    }
+  }
+
+  &__info {
+    font-size: 14px;
+  }
+
+  &__buttons {
+    button {
+      line-height: 0;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      background-color: transparent;
+
+      &:focus,
+      &:hover {
+        background-color: buttonface;
+      }
+    }
+  }
+}

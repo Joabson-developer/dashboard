@@ -1,14 +1,5 @@
 @use "sass:map";
 
-$breakpoints-max-widths: (
-  sm: 33.75rem,
-  md: 45rem,
-  lg: 60rem,
-  xl: 71.25rem,
-  xxl: 82.5rem,
-  fluid: 100%
-);
-
 .container {
   max-width: map-get($breakpoints-max-widths, "xxl");
   width: 100%;
