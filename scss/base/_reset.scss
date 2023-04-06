@@ -15,6 +15,12 @@ a {
 ul {
   list-style: none;
 }
+button {
+  cursor: pointer;
+  &:disabled {
+    cursor: not-allowed !important;
+  }
+}
 .material-icons-outlined {
   pointer-events: none;
 }

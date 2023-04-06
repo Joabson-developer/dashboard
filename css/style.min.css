@@ -19,6 +19,13 @@ ul {
   list-style: none;
 }
 
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed !important;
+}
+
 .material-icons-outlined {
   pointer-events: none;
 }
