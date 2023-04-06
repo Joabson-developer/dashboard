@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Member Registration</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <script src="js/router.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <div class="l-dashboard">
+
+    <aside class="l-aside">
+      <div class="l-aside__header">
+        <img class="c-avatar" src="https://mui.com/static/images/avatar/1.jpg" alt="Imagem de perfil de usuário">
+        <div class="l-aside__header__info">
+          <span class="l-aside__header__info__name">Joabson Silva</span>
+          <span class="l-aside__header__info__career">Web Developer</span>
+        </div>
+      </div>
+      <nav class="l-aside__nav">
+        <ul class="c-menu-list">
+          <li class="c-menu-list__item">
+            <a href="/register">
+              <span class="material-icons-outlined">
+                person_add_alt
+              </span>
+              Adicionar membro
+            </a>
+          </li>
+          <li class="c-menu-list__item">
+            <a href="/member-list">
+              <span class="material-icons-outlined">
+                list_alt
+              </span>
+              Lista de membros
+            </a>
+          </li>
+          <li class="c-menu-list__item">
+            <a href="#">
+              <span class="material-icons-outlined">
+                settings
+              </span>
+              Configurações
+            </a>
+          </li>
+          <li class="c-menu-list__item">
+            <a href="#">
+              <span class="material-icons-outlined">
+                list_alt
+              </span>
+              Logout
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <header class="c-header">
+      <nav class="c-header__nav">
+        <button data-toggle="aside">
+          <span class="material-icons-outlined">
+            menu
+          </span>
+        </button>
+
+        <div class="c-header__nav__profile">
+          <button class="c-avatar" data-toggle="profile">
+            <img src="https://mui.com/static/images/avatar/1.jpg" alt="Imagem de perfil de usuário">
+          </button>
+
+          <ul class="c-menu-list shadow">
+            <li class="c-menu-list__item">
+              <a href="#">Profile</a>
+            </li>
+            <li class="c-menu-list__item">
+              <a href="#">Account</a>
+            </li>
+            <li class="c-menu-list__item">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="c-menu-list__item">
+              <a href="#">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container" id="outlet">
+    </main>
+
+  </div>
+</body>
+
+</html>

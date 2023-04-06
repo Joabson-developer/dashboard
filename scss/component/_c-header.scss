@@ -1,0 +1,44 @@
+.c-header {
+  display: flex;
+  padding: 16px;
+  &__nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit;
+
+    button {
+      background-color: transparent;
+      border: none;
+      line-height: 0;
+      cursor: pointer;
+    }
+
+    &__profile {
+      position: relative;
+      &:not(:has(.active)) .c-menu-list {
+        display: none;
+      }
+
+      .c-menu-list {
+        position: absolute;
+        width: auto;
+        right: 0;
+        top: 48px;
+        background: #fff;
+        z-index: 1;
+      }
+    }
+  }
+
+  @media (min-width: 540px) {
+    [data-toggle="aside"] {
+      display: none;
+    }
+
+    &__nav {
+      justify-content: flex-end;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@use "sass:map";
+
+$breakpoints-max-widths: (
+  sm: 33.75rem,
+  md: 45rem,
+  lg: 60rem,
+  xl: 71.25rem,
+  xxl: 82.5rem,
+  fluid: 100%
+);
+
+.container {
+  max-width: map-get($breakpoints-max-widths, "xxl");
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+@each $name, $media in $breakpoints-max-widths {
+  @media (min-width: $media) {
+    .container-#{$name} {
+      max-width: $media;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+  }
+}

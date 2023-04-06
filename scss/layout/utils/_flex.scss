@@ -1,0 +1,24 @@
+$flex-property: (
+  start: flex-start,
+  center: center,
+  end: flex-end
+);
+
+.d-flex {
+  display: flex;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-column {
+  flex-direction: column;
+}
+
+@each $name, $value in $flex-property {
+  .align-items-#{$name} {
+    align-items: $value;
+  }
+  .justify-content-#{$name} {
+    justify-content: $value;
+  }
+}

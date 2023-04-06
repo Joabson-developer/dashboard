@@ -1,0 +1,36 @@
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > * {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.col {
+  flex: 1 0 0%;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    flex: 0 0 auto;
+    width: calc($i / 0.12 * 1%);
+  }
+
+  @each $name, $media in $breakpoints {
+    @media (max-width: $media) {
+      .col-#{$name}-#{$i} {
+        flex: 0 0 auto;
+        width: calc($i / 0.12 * 1%);
+      }
+    }
+  }
+}
