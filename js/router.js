@@ -3,7 +3,7 @@ const routes = {
   "/": "/pages/member-list.html",
   "/member-list": "/pages/member-list.html",
   "/index.html": "/pages/member-list.html",
-  "/register": "/pages/register.html",
+  "/member-register": "/pages/member-register.html",
   "/view": "/pages/view.html"
 }
 
