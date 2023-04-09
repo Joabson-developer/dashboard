@@ -304,16 +304,14 @@ button:disabled {
 .c-input__fieldset__legend {
   padding-inline: 4px;
   line-height: 24px;
-  translate: 0 12px;
   opacity: 0;
-  animation: hide-legend 350ms linear forwards;
 }
 .c-input__fieldset__label {
   position: absolute;
   left: 20px;
   top: -5px;
   z-index: 2;
-  animation: show-label 350ms linear forwards;
+  transition: translate 350ms linear;
 }
 .c-input__fieldset__input {
   width: 100%;
@@ -323,55 +321,20 @@ button:disabled {
   border: none;
   outline: none;
 }
-.c-input:has(:focus) {
+.c-input__fieldset__input:not(:placeholder-shown), .c-input__fieldset__input:invalid {
+  border-color: hsl(0deg, 76%, 50%) !important;
+}
+.c-input:has(:focus), .c-input:has(input:not(:placeholder-shown)) {
   border-color: transparent;
 }
-.c-input:has(:focus) .c-input__fieldset {
+.c-input:has(:focus) .c-input__fieldset, .c-input:has(input:not(:placeholder-shown)) .c-input__fieldset {
   border-color: rgba(0, 0, 0, 0.2);
 }
-.c-input:has(:focus) .c-input__fieldset__legend {
-  animation: show-legend 350ms linear forwards;
-}
-.c-input:has(:focus) .c-input__fieldset__label {
-  animation: hide-label 350ms linear forwards;
+.c-input:has(:focus) .c-input__fieldset__label, .c-input:has(input:not(:placeholder-shown)) .c-input__fieldset__label {
+  transition: translate 350ms linear;
+  translate: 0 -18px;
 }
 
-@keyframes hide-label {
-  0% {
-    translate: 0 0;
-  }
-  100% {
-    translate: 0 -18px;
-    opacity: 0;
-  }
-}
-@keyframes show-label {
-  0% {
-    translate: 0 -18px;
-    opacity: 0;
-  }
-  100% {
-    translate: 0 0;
-  }
-}
-@keyframes show-legend {
-  0% {
-    translate: 0 20px;
-  }
-  100% {
-    translate: 0 -2px;
-    opacity: 1;
-  }
-}
-@keyframes hide-legend {
-  0% {
-    translate: 0 -2px;
-    opacity: 1;
-  }
-  100% {
-    translate: 0 20px;
-  }
-}
 .c-pagination {
   display: flex;
   align-items: center;

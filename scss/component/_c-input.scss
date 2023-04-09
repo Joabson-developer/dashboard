@@ -22,9 +22,7 @@
     &__legend {
       padding-inline: 4px;
       line-height: 24px;
-      translate: 0 12px;
       opacity: 0;
-      animation: hide-legend 350ms linear forwards;
     }
 
     &__label {
@@ -32,7 +30,7 @@
       left: 20px;
       top: -5px;
       z-index: 2;
-      animation: show-label 350ms linear forwards;
+      transition: translate 350ms linear;
     }
 
     &__input {
@@ -42,58 +40,24 @@
       font-size: 16px;
       border: none;
       outline: none;
+
+      &:not(:placeholder-shown),
+      &:invalid {
+        border-color: hsl(0, 76%, 50%) !important;
+      }
     }
   }
 
-  &:has(:focus) {
+  &:has(:focus),
+  &:has(input:not(:placeholder-shown)) {
     border-color: transparent;
     .c-input__fieldset {
       border-color: rgba(0, 0, 0, 0.2);
 
-      &__legend {
-        animation: show-legend 350ms linear forwards;
-      }
-
       &__label {
-        animation: hide-label 350ms linear forwards;
+        transition: translate 350ms linear;
+        translate: 0 -18px;
       }
     }
-  }
-}
-
-@keyframes hide-label {
-  0% {
-    translate: 0 0;
-  }
-  100% {
-    translate: 0 -18px;
-    opacity: 0;
-  }
-}
-@keyframes show-label {
-  0% {
-    translate: 0 -18px;
-    opacity: 0;
-  }
-  100% {
-    translate: 0 0;
-  }
-}
-@keyframes show-legend {
-  0% {
-    translate: 0 20px;
-  }
-  100% {
-    translate: 0 -2px;
-    opacity: 1;
-  }
-}
-@keyframes hide-legend {
-  0% {
-    translate: 0 -2px;
-    opacity: 1;
-  }
-  100% {
-    translate: 0 20px;
   }
 }
